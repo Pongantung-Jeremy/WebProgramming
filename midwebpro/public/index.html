@@ -4,43 +4,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="X-UA-Compatible" content="IE=EDGE">
-    <meta name="author" content="Prince Siachin">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
     <link rel="stylesheet" href="/stylesheet/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Student's Form</title>
   </head>
   <body>
     <header>
-      <p class="logo">Princeton University</p>
-      <nav>
-        <a href="#"><li>Home</li></a>
-        <a href="/public/about.html"><li>About</li></a>
+<!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Unklab Student</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home </a>
+            <a class="nav-item nav-link" href="/public/about.html">about</a>
+          </div>
+        </div>
       </nav>
     </header>
 
+<!-- forms-->
     <section class="container">
-      <div class="frms">
-        <h1>student form</h1>
+      <div class="judul">
+        
+      </div>
+      <div class="forms">
+        <h1>Unklab Student</h1>
+        <h3>Web App</h3>
         <button type="button" name="button-show">Show Form</button>
         <form class="form">
           <h2>Input Datas</h2>
           <div>
-            <label for="id">student id</label>
-            <input type="text" name="id" placeholder="S11810003" required>
+            <label for="nim">Student ID(NIM)</label>
+            <input type="text" name="id" placeholder="105021710031" required>
           </div>
 
           <div>
-            <label for="fullname">fullname</label>
-            <input type="text" name="fullname" placeholder="emelie rose" required>
-          </div>
-
-          <div>
-            <label for="email">email</label>
-            <input type="email" name="email" placeholder="yourname@something.com" required>
+            <label for="fullname">Full Name</label>
+            <input type="text" name="fullname" placeholder="Park Chae Young" required>
           </div>
 
           <div class="gender">
-            <label for="gender">gender</label>
+            <label for="gender">Gender</label>
             <div>
               <input class="male" type="radio" name="gender" value="male">
               <input class="female" type="radio" name="gender" value="female">
@@ -48,21 +56,21 @@
           </div>
 
           <div>
-            <label for="faculty">faculty</label>
+            <label for="faculty">Faculty</label>
             <select id="faculties" name="faculty">
-              <option value="all">--select your faculty--</option>
-              <option value="theology">faculty of theology</option>
-              <option value="nursing">faculty of nursing</option>
-              <option value="agriculture">faculty of agriculture</option>
-              <option value="computer_science">faculty of computer science</option>
-              <option value="economic">faculty of economic and business</option>
-              <option value="secretary">faculty of secretary</option>
-              <option value="education">faculty of education</option>
+              <option value="all">--select faculty--</option>
+              <option value="filsafat">Filsafat</option>
+              <option value="keperawatan">Keperawatan</option>
+              <option value="pertanian">Pertanian</option>
+              <option value="fik">Ilmuh Komputer</option>
+              <option value="ubs">Unklab Business School</option>
+              <option value="asmi">ASMI Klabat</option>
+              <option value="pendidikan">Keguruan & Ilmuh Pendidikan</option>
             </select>
           </div>
 
           <div>
-            <label for="programs">program of study</label>
+            <label for="programs">Program of study</label>
             <select id="programs" name="programs">
               <option class="all" value="all" id="options">--select your faculty--</option>
             </select>
@@ -72,19 +80,21 @@
         </form>
       </div>
 
+
+<!--Filters-->
       <div class="filters">
         <h1>filter students by</h1>
         <form id="form2">
           <label>faculty</label>
           <select class="fil-faculty" name="fil-faculty">
-            <option value="all">--select your faculty--</option>
-            <option value="theology">faculty of theology</option>
-            <option value="nursing">faculty of nursing</option>
-            <option value="agriculture">faculty of agriculture</option>
-            <option value="comp">faculty of computer science</option>
-            <option value="economic">faculty of economic and business</option>
-            <option value="sec">faculty of secretary</option>
-            <option value="edu">faculty of education</option>
+              <option value="all">--select faculty--</option>
+              <option value="filsafat">Filsafat</option>
+              <option value="keperawatan">Keperawatan</option>
+              <option value="pertanian">Pertanian</option>
+              <option value="fik">Ilmuh Komputer</option>
+              <option value="ubs">Unklab Business School</option>
+              <option value="asmi">ASMI Klabat</option>
+              <option value="pendidikan">Keguruan & Ilmuh Pendidikan</option>
           </select>
           <label>program of study</label>
           <select class="fil-programs" name="fil-programs">
@@ -109,6 +119,7 @@
       </div>
     </section>
 
+<!--Student Info-->
     <section class="students-datas">
       <h1>student information list</h1>
       <input type="text" name="searchbar" class="options" value="" placeholder="search student by name....">
@@ -123,18 +134,22 @@
         </tbody>
       </table>
     </section>
+<section>
 
-    <footer>
-      <div class="imgs-footer">
-        <span>made with</span>
-        <div>
-          <img src="/images/html.svg" alt="">
-          <img src="/images/css.svg" alt="">
-          <img src="/images/js.svg" alt="">
+  <!--Footer-->
+  <footer class="container">
+    <div class="row">
+        <div class="footer-copyright">
+            &copy; Jeyy 2021
         </div>
-      </div>
-      <span>&#169; 2019 Copyright: Prince Studio. All Rights Reserved. </span>
-    </footer>
-  <script src="/src/app.js" charset="utf-8"></script>
+    </div>
+</footer>
+</section>
+   
+
+  <script src="/src/js.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
