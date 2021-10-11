@@ -18,7 +18,7 @@
 html{
   font-size: 16px;
   scroll-behavior: smooth;
-  font-family: "Poppins",sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
 body{
@@ -38,7 +38,6 @@ header{
   width:100%;
   padding: 0 20px;
   margin-bottom: 40px;
-  background:#001f3f;
   z-index: 1;
 }
 
@@ -89,11 +88,11 @@ nav a:hover{
   position: absolute;
   height: 2px;
   width: 95%;
-  background:rgba(190,150,170,0.5);
+  background:rgb(255, 255, 255);
   bottom:-10px;
 }
 
-.frms,.filters{
+.forms,.filters{
   width: 50%
 }
 
@@ -108,7 +107,7 @@ div > h1{
 
 .about-container > h1{
   font-size: 3.125rem;
-  border-bottom: 1.5px solid var(--darker);
+  border-bottom: 1.5px solid var(--white);
   padding: 10px;
   height: 70px;
   width: 100%;
@@ -120,22 +119,21 @@ div > h1{
   font-weight: 400;
 }
 
-.frms > h1::after{
+.forms > h1::after{
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   height: 2px;
   width:200%;
-  background: var(--darker);
 }
 
 button{
   height: 50px;
   width: 200px;
-  border: 1px solid #3c8dbc;
+  border: 1px solid #c700d9;
   border-radius: 6px;
-  background:#3c8ddc;
+  background:#c700d9;
   color: var(--light);
   font-size: 1.375rem;
   letter-spacing: 0.050rem;
@@ -145,9 +143,9 @@ button{
 .form{
   min-height: 600px;
   width: 100%;
-  border:.2px solid #888;
-  border-top:3px solid #888;
-  border-bottom:1.5px solid #888;
+  border:.2px solid rgb(255, 255, 255);
+  border-top:3px solid rgb(255, 255, 255);
+  border-bottom:1.5px solid rgb(255, 255, 255);
   border-radius: 4px;
   margin-top:20px;
   background: #fff;
@@ -274,8 +272,8 @@ option:nth-of-type(even){
 .form button{
   width:140px;
   font-size: 1.25rem;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #c700d9;
+  border-color: #c700d9;
 }
 
 .filters{
@@ -292,9 +290,9 @@ option:nth-of-type(even){
 .filters form{
   display: flex;
   flex-direction:  column;
-  border:.2px solid #daacbd;
-  border-top:3px solid #dd4b39;
-  border-bottom:1.5px solid #abacd3;
+  border:.2px solidw rgb(255, 255, 255);
+  border-top:3px solid #ffffff;
+  border-bottom:1.5px solid #ffffff;
   border-radius: 4px;
   padding: 20px;
   width:550px;
@@ -311,7 +309,7 @@ option:nth-of-type(even){
   right:150px;
   margin-top:45px;
   clip-path: var(--clip);
-  background: grey;
+  background: rgb(0, 0, 0);
   height: 16px;
   width: 18px;
 }
@@ -320,7 +318,7 @@ option:nth-of-type(even){
   margin: 10px 0 10px;
   background: transparent;
   border: 1px solid;
-  color: grey;
+  color: rgb(0, 0, 0);
   position:relative;
 }
 
@@ -358,7 +356,7 @@ option:nth-of-type(even){
   text-transform: var(--caps);
   font-weight: lighter;
   letter-spacing: 0.1rem;
-  color:#7b4c74;
+  color:#5c2654;
 }
 
 .students-datas input{
@@ -367,12 +365,12 @@ option:nth-of-type(even){
   font-size: 1.25rem;
   padding-left: 40px;
   margin:6px 0 30px;
-  border-color: purple;
+  border-color: rgb(218, 0, 0);
   position: relative;
 }
 
 .students-datas >h1::before{
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Dosis';
   content:"\f002";
   position: absolute;
   left: 40px;
@@ -400,10 +398,10 @@ tr,th,td,tbody{
   height: 35px;
   width: 50%;
   font-size: 24px;
-  color: #fffc00;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-  column-rule: -webkit-linear-gradient(left, #ffffff, #fffc00);
-  column-rule: -o-linear-gradient(left, #ffffff, #fffc00);
-  column-rule: linear-gradient(to right, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #ff0000;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+  column-rule: -webkit-linear-gradient(left, #ffffff, #ff0000);
+  column-rule: -o-linear-gradient(left, #ffffff, #ff0000);
+  column-rule: linear-gradient(to right, #ffffff, #ff0000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: none;
   background: none;
   cursor: pointer;
@@ -416,8 +414,8 @@ tr,th,td,tbody{
 }
 
 footer{
-  min-height: 90px;
-  background-color: #444;
+  min-height: 40px;
+  background-color: #b60cc5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,25 +425,10 @@ footer{
   width:100%;
   bottom: -300px;
 }
-.about-footer{
-  bottom:0;
-}
+
 span{
   color: var(--light);
   font-size: 1.10rem;
   text-transform: capitalize;
   opacity: 0.8;
-}
-.imgs-footer{
-  height: 100%;
-  min-width: 220px;
-  margin:12px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.imgs-footer  img{
-  width: 40px;
-  height: 40px;
 }
